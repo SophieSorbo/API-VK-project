@@ -91,11 +91,11 @@ class YandexApi:
         with open(f'{name}.jpg', 'rb') as f:
             response = requests.put(upload_url, files={"file": f})
 
-class Client(VK_Api, Yandex_Api):
+class Client(VKApi, YandexApi):
 
     def __init__(self, token_vk, token_yad):
-        VK_Api.__init__(self, token_vk)
-        Yandex_Api.__init__(self, token_yad)
+        VKApi.__init__(self, token_vk)
+        YandexApi.__init__(self, token_yad)
 
     def save_photos(self):
         photos = self.get_photos()
