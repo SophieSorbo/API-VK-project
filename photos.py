@@ -17,7 +17,7 @@ def oauth_url():
     oauth_url = f'{OAUTH_BASE_URL}?{urlencode(params)}'
     return oauth_url
 
-class VK_Api:
+class VKApi:
 
     API_BASE_URL = 'https://api.vk.com/method'
 
@@ -63,7 +63,7 @@ class VK_Api:
             json.dump(photos_info, file)
 
 
-class Yandex_Api:
+class YandexApi:
 
     URL_YADISK = 'https://cloud-api.yandex.net'
 
